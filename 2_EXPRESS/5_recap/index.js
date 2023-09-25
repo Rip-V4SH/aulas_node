@@ -7,6 +7,7 @@ const caminho = path.join(__dirname, "templates")
 
 app.get('/', (requisicao, resposta) => {
     resposta.sendFile(`${caminho}/index.html`)
+    // resposta.send("usando nodemon")
 })
 
 app.listen(3000,() => {

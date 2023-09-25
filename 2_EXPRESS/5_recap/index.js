@@ -1,9 +1,12 @@
 const express = require("express") // importa o express
+const path = require("path")
 
 const app = express() // usa o express
 
+const caminho = path.join(__dirname, "templates")
+
 app.get('/', (requisicao, resposta) => {
-    resposta.send("opa! bem vindo ai meu servidor :)")
+    resposta.sendFile(`${caminho}/index.html`)
 })
 
 app.listen(3000,() => {
